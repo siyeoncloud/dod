@@ -1,0 +1,800 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('font/Montserrat/Montserrat-SemiBold.eot');
+    src: url('Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Montserrat-SemiBold.woff2') format('woff2'),
+        url('Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-Bold.eot');
+    src: url('Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Montserrat-Bold.woff2') format('woff2'),
+        url('Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-Regular.eot');
+    src: url('Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Montserrat-Regular.woff2') format('woff2'),
+        url('Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+    /* list-style에 기본값 상쇄 */
+}
+
+a {
+    text-decoration: none;
+    /* 텍스트 밑줄 없애기 */
+    color: inherit;
+    /* 부모의 상속값 받기 */
+}
+
+body {
+    background-color: #fff;
+    color: #1e1e1e;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    line-height: 1;
+    /*  font-family: ;
+    font-weight: ; */
+    min-width: 1440px;
+    font-family: 'Montserrat', 'Pretendard', sans-serif;
+}
+
+.header .h_in {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    /*     background-color: #fff; */
+    color: #1a1a1a;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.header nav .gnd {
+    display: flex;
+    text-align: center;
+    margin-right: 200px;
+}
+
+.header nav .gnd .depth01 {
+    position: relative;
+}
+
+.header nav .gnd .depth01>a {
+    line-height: 100px;
+    padding: 0 30px;
+}
+
+.header nav .gnd .depth01:hover>a {
+    color: #fff;
+}
+
+.header nav .gnd .depth01 .depth02 {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255,255,255,1);
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+    font-size: 14px;
+    display: none;
+}
+
+.header nav .gnd .depth01 .depth02 li {
+    padding: 16px 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.header nav .gnd .depth01 .depth02 li:hover {
+    color: #000000;
+}
+
+.header nav .gnd .depth01:hover .depth02 {
+    display: block;
+}
+
+.util {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.util .depth01 {
+    margin: 0 12px;
+    padding: 33px 0;
+}
+
+/* 📌 Main 지평좌표계(´。＿。｀) */
+
+.main_visual>div {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 0;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+.main_visual>div iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* container ( STEADT SELLER )📌 */
+.cont01 {
+    margin-top: 203px;
+    margin-bottom: 195px;
+}
+
+.cont01 .title_box {
+    margin-bottom: 74px;
+}
+
+.cont01 .title_box h2 {
+    margin-bottom: 35px;
+    font-size: 70px;
+}
+
+.cont01 .tab_box ul {
+    display: flex;
+    justify-content: center;
+}
+
+.cont01 .tab_box ul li {
+    padding: 0 20px;
+}
+
+/* swiper start ( 슬라이더 ╰（‵□′）╯)📌 */
+
+.perview {
+    margin: 25px auto 150px;
+    padding: 0 55px;
+    overflow: hidden;
+}
+
+.perview h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    padding-bottom: 60px;
+}
+
+.swiper-slide {
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 15px 70px;
+}
+
+.perview .swiper-slide {
+    position: relative;
+}
+
+.perview .swiper-slide.end a figure::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url(../DOD/ICON/soldout.png);
+    background-color: rgba(255, 255, 255, 0.6);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.perview .swiper-slide figure {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.swiper-slide figure img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide .name strong {
+    display: block;
+    margin-bottom: 9px;
+}
+
+.swiper-slide .name span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 26px;
+}
+
+/* 품절 슬라이더 설정 */
+.swiper-slide .btn_sd {
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-slide .btn_sd figure {
+    width: 27px;
+}
+
+.swiper-slide .btn_sd figure img {
+    margin-top: 9px;
+    width: 100%;
+}
+
+/*  .swiper02 */
+
+.swiper-box {
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.swiper-box .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: calc((100% - 30px) / 2) !important;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.swiper02 {
+    width: 100%;
+    margin: 25px auto 150px;
+    padding: 0 55px;
+    overflow: hidden;
+
+}
+
+.swiper02 .swiper-slide figure {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.swiper02 .end a figure::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url(../DOD/ICON/soldout.png);
+    background-color: rgba(255, 255, 255, 0.6);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.swiper-scrollbar {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+}
+
+.swiper-horizontal>.swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+    position: sticky;
+}
+
+
+
+/* swiper end ( 슬라이더 ╰（‵□′）╯) 📌 */
+.banner-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner {
+    position: relative;
+}
+.banner_img {
+    filter: brightness(85%);
+}
+
+.banner-box .left_banner-box .banner .banner_img {
+    display: flex;
+    justify-content: left;    
+}
+
+.banner-box .left_banner-box .banner .banner_img figure {
+    width: 960px;
+    height: 100vh;
+}
+
+.banner-box .left_banner-box .banner .banner_img figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.left_banner-box .banner .banner-txt {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 5;
+    text-align: center;
+    color: #fff;
+}
+
+/* .banner .banner-txt:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+} */
+/* 왼쪽 카테고리 끝 오른쪽 시작  */
+
+.right_banner-box {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+
+.right_banner-box::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: hsla(40, 100%, 50%, 0.335);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    /* 투명도 조절 */
+    transition: all 1.5s;
+    backdrop-filter: blur(7px);
+}
+
+.banner-box .right_banner-box .banner {
+    width: 50%;
+    position: relative;
+}
+
+.banner-box .right_banner-box .banner .banner_img {
+    /*     display: flex; */
+    object-fit: cover;
+}
+
+.banner-box .right_banner-box .banner .banner_img figure {
+    height: 50vh;
+}
+
+.banner-box .right_banner-box .banner .banner_img figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right_banner-box .banner .banner-txt {
+    color: #ffffff;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 5;
+    text-align: center;
+}
+
+.banner-txt .txt-box .inner h3 {
+    font-size: 30px;
+}
+
+/* rorkxdms zkxprhfl wlSWK tmxmfptmqkesp ..  */
+.img-box {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+.img-box .innner {
+    position: relative;
+}
+
+/* 생각해보고 만드세요 ~ ^^ !!!  */
+
+.cont02 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.cont02 .img-box .inner .big_gif figure {
+    width: 960px;
+    height: 100vh;
+}
+
+.cont02 .img-box .inner .big_gif figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont02 .title_box02 {
+    margin-top: 120px;
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+.cont02 .title_box02 h2 {
+    margin-bottom: 35px;
+    font-size: 70px;
+}
+
+.cont02 .end figure {
+    position: relative;
+}
+
+.cont02 .end>figure::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url(../DOD/ICON/soldout.png);
+    background-color: rgba(255, 255, 255, 0.6);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cont02 .name_p {
+    margin-bottom: 8px;
+}
+
+/* 애니메이션 슬라이더 모션 */
+
+.dod-swiper {
+    width: 100%;
+    position: relative;
+    margin: 0 auto 48px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.dod-swiper .simply {
+    margin: 110px 0;
+    width: 5020px;
+    overflow: hidden;
+}
+
+.dod-swiper .simply .content {
+    display: flex;
+    list-style: none;
+    animation: scrolling 60s linear infinite;
+}
+
+.dod-swiper .simply .content .item {
+    width: 2510px;
+    white-space: nowrap;
+    font-weight: 800;
+    font-size: 120px;
+    line-height: 111%;
+    color: #fff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #d1d1d1;
+    flex-shrink: 0;
+    font-family: 'Pretendard';
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translatex(-5020px);
+    }
+}
+
+/* 애니메이션 슬라이더 모션 */
+
+.cont03 {
+    width: 100%;
+    background-color: #eae2d3;
+    padding: 150px 0;
+    margin-bottom: 195px;
+}
+
+.cont03 .title_box {
+    margin-bottom: 74px;
+}
+
+.cont03 .title_box h2 {
+    margin-bottom: 35px;
+    font-size: 70px;
+}
+
+.cont03 .m_banner-box .m_banner {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+.cont03 .m_banner-box .m_banner .m_banner_img {
+    margin-bottom: 30px;
+}
+
+.cont03 .m_banner-box .m_banner .m_banner_img figure {
+    width: 625px;
+    height: 300px;
+}
+
+.cont03 .m_banner-box .m_banner .m_banner_img figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(75%)
+}
+
+.cont03 .m_banner-box .m_banner-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 5;
+    text-align: center;
+    color: #fff;
+}
+.cont03 .m_inner {
+    position: absolute;
+    bottom: 54px;
+    margin-left: 35px;
+    color: whitesmoke;
+    text-align: justify;
+}
+
+.cont03 .m_inner h3 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.cont03 .m_inner p {
+    color: #e3e3ea;
+}
+
+
+/* cont04 */
+
+.cont04 .tag_clear {
+    margin: 160px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont04 .tag_box {
+    width: 50%;
+    height: 300px;
+    position: relative;
+    background: url(/DOD/배경.jpg);
+}
+
+.cont04 .tag_box .insta_img figure {
+    width: 280px;
+    position: absolute;
+    left: 235px;
+}
+
+.cont04 .tag_box .in_txt .in_box .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.cont04 .tag_box figure {
+    width: 960px;
+    height: 300px;
+}
+
+.cont04 .tag_box figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont04 .in_txt .in_box .inner h3 {
+    font-size: 30px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+.footer_container {
+    text-align: left;
+    width: 100%;
+}
+
+.footer_container {
+    background-color: #1a1a1a;
+    padding: 80px 0;
+    color: #9a9a9a;
+}
+
+.footer_container .ft_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1280px;
+}
+
+.footer_container .ft_box .ft_left .ft_logo {
+    margin-bottom: 20px;
+}
+
+.cboth:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.footer_container .ft_box .ft_left .ft_b {
+    display: flex;
+    align-items: center;
+    line-height: 22px;
+    font-size: 14px;
+    color: #9a9a9a;
+}
+
+.footer_container .ft_box .ft_left .ft_b li {
+    position: relative;
+}
+
+.ft_dot {
+    display: inline-block;
+    width: 27px;
+    height: 16px;
+    background-image: url(../DOD/ICON/dot.png);
+}
+
+.ft_info {
+    padding-top: 20px;
+    color: #9a9a9a;
+    font-size: 12px;
+    line-height: 2;
+    font-weight: 400;
+}
+
+.ft_line {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-image: url(../DOD/ICON/ft_line.svg);
+    background-position: center;
+}
+
+.ft_copyright {
+    padding-top: 20px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+}
+
+.ft_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ft_menu {
+    display: flex;
+}
+
+.ft_menu li:first-child {
+    margin-left: 0px;
+}
+
+.ft_menu li {
+    margin: 0 24px;
+}
+
+.ft_menu li a {
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: -0.02em;
+}
+
+.ft_sns {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ft_sns li {
+    margin-left: 16px;
+}
