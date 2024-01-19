@@ -624,7 +624,7 @@ body {
     width: 50%;
     height: 300px;
     position: relative;
-    background: url(/DOD/배경.jpg);
+    background: url(../DOD/배경.jpg);
 }
 
 .cont04 .tag_box .insta_img figure {
